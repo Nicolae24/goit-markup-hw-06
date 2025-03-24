@@ -903,12 +903,11 @@ ol {
 }
 
 .container-logo-foter {
-  width: 288px;
   margin-bottom: 72px;
 }
 
 .container-text-foter {
-  width: 208px;
+  /* width: 208px; */
   margin-bottom: 72px;
 }
 
@@ -961,6 +960,8 @@ ol {
   outline: transparent;
   padding: 8px 16px;
   /* margin-bottom: 16px; */
+  opacity: 0.3;
+  
 }
 
 .input-subscribe::placeholder {
@@ -1007,7 +1008,16 @@ ol {
     flex-wrap: wrap;
     padding-left: 108px;
     align-items: flex-start;
+    column-gap: 24px;
+    row-gap: 72px;
   }
+
+  .container-logo-foter {
+    margin-bottom: 0;
+}
+
+.container-text-foter {
+       margin-bottom: 0;}
 
   .container-logo-foter,
   .container-text-foter,
@@ -1041,7 +1051,12 @@ ol {
   }
   .foter .container {
     padding-left: 16px;
+    flex-wrap: nowrap;
+      column-gap: 0;
+    row-gap: 0;
   }
+
+     
   .container-logo-foter {
     margin-right: 120px;
     margin-bottom: 0px;
@@ -1054,6 +1069,10 @@ ol {
   .text-subscribe {
     margin-left: auto;
   }
+.input-subscribe {
+  opacity: 1;
+}
+
 }
 
 /* #endregion footer */
@@ -1258,6 +1277,7 @@ ol {
 .form-checkbox-icon {
   /* opacity: 0; */
   fill: #fff;
+  width: 16px;
 }
 
 .form-privacy-checkbox:checked + .form-label-checkbox .custom-checkbox-wraper {
