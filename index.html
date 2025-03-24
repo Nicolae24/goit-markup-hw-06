@@ -52,7 +52,7 @@
             </li>
           </ul>
         </address>
-        <button class="burger-btn" type="button">
+        <button class="burger-btn js-mobile-menu" type="button">
           <svg class="burger-icon" width="24" height="24">
             <use href="./images/icons.svg#icon-burger"></use>
           </svg>
@@ -897,5 +897,68 @@
         </form>
       </div>
     </div>
+    <script>
+      // close modal
+      // document
+      //   .querySelector(".icon-overlay-close")
+      //   .addEventListener("click", () => {
+      //     document.querySelector(".modal-overlay").classList.remove("is-open");
+      //   });
+      // // open modal
+      // document.querySelector(".btn-review").addEventListener("click", () => {
+      //   document.querySelector(".mo-overlay").classList.add("is-open");
+      // });
+      // Отримуємо елементи
+      const openModalBtn = document.querySelector(".knopka");
+      const closeModalBtn = document.querySelector(".icon-overlay-close");
+      const modalOverlay = document.querySelector(".modal-overlay");
+
+      // Функція для відкриття модалки
+      openModalBtn.addEventListener("click", () => {
+        modalOverlay.classList.add("is-open");
+      });
+
+      // Функція для закриття модалки
+      closeModalBtn.addEventListener("click", () => {
+        modalOverlay.classList.remove("is-open");
+      });
+      // Закриття модалки при кліку поза нею
+      modalOverlay.addEventListener("click", (event) => {
+        if (event.target === modalOverlay) {
+          modalOverlay.classList.remove("is-open");
+        }
+      });
+
+      const burgerBtn = document.querySelector(".burger-btn");
+      const closeMenuBtn = document.querySelector(".mobile-close-btn");
+      const mobileMenu = document.querySelector(".mobile-menu");
+
+      // Функція відкриття меню
+      burgerBtn.addEventListener("click", () => {
+        mobileMenu.classList.add("is-open");
+      });
+
+      // Функція закриття меню
+      closeMenuBtn.addEventListener("click", () => {
+        mobileMenu.classList.remove("is-open");
+      });
+
+      // Закриття меню при кліку поза ним
+      document.addEventListener("click", (event) => {
+        if (
+          !mobileMenu.contains(event.target) &&
+          !burgerBtn.contains(event.target)
+        ) {
+          mobileMenu.classList.remove("is-open");
+        }
+      });
+
+      // mobile-menu toggle
+      // document.querySelectorAll(".js-mobile-menu").forEach((btn) => {
+      //   btn.addEventListener("click", () => {
+      //     document.querySelector(".mobile-menu").classList.toggle("is-open");
+      //   });
+      // });
+    </script>
   </body>
 </html>

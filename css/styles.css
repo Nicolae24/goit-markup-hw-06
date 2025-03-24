@@ -1287,13 +1287,14 @@ ol {
 }
 
 .checkbox-wraper {
+  /* display: flex; */
   margin-bottom: 24px;
   /* display: inline-block; */
   /* align-items: center; */
 }
 
 .custom-checkbox-wraper {
-  display: inline-flex;
+  display: flex;
   justify-content: center;
   align-items: center;
   margin-right: 8px;
@@ -1310,9 +1311,11 @@ ol {
 .checkbox-text {
   /* display: inline-block;
   align-items: center; */
+  display: inline-block;
 }
 
 .link-privacy-policy {
+  /* display: inline; */
   line-height: 1.33333;
   text-decoration: underline;
   text-decoration-skip-ink: none;
