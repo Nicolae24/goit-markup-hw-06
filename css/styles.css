@@ -267,8 +267,8 @@ ol {
   position: relative;
   padding-top: 72px;
   padding-bottom: 40px;
-  /* display: flex;
-  flex-direction: column; */
+  display: flex;
+  flex-direction: column;
 }
 
 .mobile-close-btn {
@@ -293,10 +293,12 @@ ol {
 }
 
 .mobile-menu-nav-list {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+
 }
-.mobile-menu-nav-list-item:not(:last-child) {
-  margin-bottom: 40px;
-}
+
 
 .mobile-menu-nav-link.current {
   color: #404bbf;
@@ -320,14 +322,18 @@ ol {
   font-style: normal;
   margin-bottom: 48px;
 }
+
+.mobile-menu-contact-list {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
 .mobile-menu-contact-link {
   color: #434455;
   transition: color var(--animation);
 }
 
-.mobile-menu-contact-item:not(:last-child) {
-  margin-bottom: 24px;
-}
 .mobile-menu-soc-list {
   display: flex;
   gap: 40px;
@@ -475,7 +481,7 @@ ol {
 }
 
 @media screen and (min-resolution: 192dpi) and (max-width: 767px) {
-  .hero {
+  .title {
     background-image: linear-gradient(
         rgba(46, 47, 66, 0.7),
         rgba(46, 47, 66, 0.7)
@@ -485,7 +491,7 @@ ol {
 }
 
 @media screen and (min-resolution: 192dpi) and (max-width: 1157px) {
-  .hero {
+  .title {
     background-image: linear-gradient(
         rgba(46, 47, 66, 0.7),
         rgba(46, 47, 66, 0.7)
@@ -495,7 +501,7 @@ ol {
 }
 
 @media screen and (min-resolution: 192dpi) and (min-width: 1158px) {
-  .hero {
+  .title {
     background-image: linear-gradient(
         rgba(46, 47, 66, 0.7),
         rgba(46, 47, 66, 0.7)
@@ -1006,7 +1012,7 @@ ol {
   .foter .container {
     flex-direction: row;
     flex-wrap: wrap;
-    padding-left: 108px;
+    justify-content: center;
     align-items: flex-start;
     column-gap: 24px;
     row-gap: 72px;
