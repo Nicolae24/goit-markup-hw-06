@@ -52,7 +52,7 @@
             </li>
           </ul>
         </address>
-        <button class="burger-btn js-mobile-menu" type="button">
+        <button class="burger-btn" type="button">
           <svg class="burger-icon" width="24" height="24">
             <use href="./images/icons.svg#icon-burger"></use>
           </svg>
@@ -928,6 +928,12 @@
           modalOverlay.classList.remove("is-open");
         }
       });
+      // Закриття модалки при натисканні клавіші Escape
+      document.addEventListener("keydown", (event) => {
+        if (event.key === "Escape") {
+          modalOverlay.classList.remove("is-open");
+        }
+      });
 
       const burgerBtn = document.querySelector(".burger-btn");
       const closeMenuBtn = document.querySelector(".mobile-close-btn");
@@ -949,6 +955,12 @@
           !mobileMenu.contains(event.target) &&
           !burgerBtn.contains(event.target)
         ) {
+          mobileMenu.classList.remove("is-open");
+        }
+      });
+      // Закриття при натисканні Escape
+      document.addEventListener("keydown", (event) => {
+        if (event.key === "Escape") {
           mobileMenu.classList.remove("is-open");
         }
       });
